@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Valentine</title>
+  <link rel="stylesheet" href="AggyVal.css"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
+  </style>
+</head>
+<body class="light">
+
+  <section id="home">
+    <h1>Ntombifuthi A Maseko</h1>
+    
+    <div class="content-box">
+      <h2>Will you be my valentine?</h2>
+      <p>I know I am not physically there, but imagine I am on one knee with a handwritten letter to pop the question.</p>
+      
+      <div class="buttons">
+        <button id="yesButton" class="btn-primary">YES</button>
+        <button class="btn-link">ALSO YES</button>
+      </div>
+    </div>
+  </section>
+
+  <form id="notifyForm" action="https://formspree.io/f/xykpqpgd" method="POST" style="display:none;">
+    <input type="text" name="answer" value="She clicked YES!">
+  </form>
+
+  <footer>
+    <p>&copy; 2024 Sinethemba Mncina. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const yesBtn = document.getElementById('yesButton');
+    const form = document.getElementById('notifyForm');
+
+    // This makes the button "locked" to the cursor
+    document.addEventListener('mousemove', (e) => {
+      yesBtn.style.position = 'fixed';
+      
+      // We subtract half the button's width/height to center it on the tip of the cursor
+      const x = e.clientX - (yesBtn.offsetWidth / 2);
+      const y = e.clientY - (yesBtn.offsetHeight / 2);
+      
+      yesBtn.style.left = x + 'px';
+      yesBtn.style.top = y + 'px';
+      yesBtn.style.zIndex = '9999'; // Keeps it above everything else
+      yesBtn.style.pointerEvents = 'auto'; // Ensures it stays clickable
+    });
+
+    // Send notification when clicked
+    yesBtn.addEventListener('click', () => {
+      form.submit();
+      alert("Defintely buying a ring this year🥰");
+      window.location.href = "Myvali.mp4"; 
+    });
+      
+     
+  </script>
+</body>
+
+</html>

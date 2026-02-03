@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Meow Script", cursive;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('Ntorose.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: pink;
+  color: white; /* Clean white text */
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 3.5rem;
+  padding-top: 2rem;
+  text-align:  center;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.content-box {
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+p {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  text-align:  center;
+}
+
+/* The "Heat-Seeking" Yes Button */
+.btn-primary {
+  background-color: #ff1493; /* Bright Pink */
+  color: white;
+  padding: 15px 30px;
+  border: 2px solid white;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  /* No transitions here! This makes it stick to the cursor instantly */
+}
+
+.btn-link {
+  background-color: rgba(186, 85, 211, 0.6);
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.image-container img {
+  max-width: 350px;
+  border-radius: 20px;
+  border: 4px solid white;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
+footer {
+  padding: 10px;
+  background: rgba(186, 85, 211, 0.9);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
